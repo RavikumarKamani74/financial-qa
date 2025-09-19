@@ -63,7 +63,7 @@ Ask questions like:
 "Summarize financial performance"
 
 📸 Screenshot
-![financial-qa.png](https://raw.githubusercontent.com/RavikumarKamani74/financial-qa/main/financial-qa.png)
+![financial-qa.png](financial-qa.png)
 
 
 📂 Project Structure
