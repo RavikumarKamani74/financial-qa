@@ -63,7 +63,8 @@ Ask questions like:
 "Summarize financial performance"
 
 📸 Screenshot
-![Financial QA](https://user-images.githubusercontent.com/.../image.png)
+<img width="1536" height="1024" alt="financial-qa" src="https://github.com/user-attachments/assets/e4dd3062-c85e-4ef8-a9ed-6da44c1d7ac8" />
+
 
 📂 Project Structure
 bash
