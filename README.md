@@ -1,65 +1,95 @@
-# Financial Document Q&A
+# 💬 Financial Document Q&A Assistant
 
-A local Streamlit app that extracts financial metrics from Excel/PDF files and provides an interactive question-answering chat interface. Uses Ollama (optional) as a local LLM fallback.
+A Streamlit-based application to process **financial documents (PDF & Excel)** and provide an **interactive question-answering system** powered by **Ollama (local LLMs)**.  
+The app extracts **revenues, expenses, profits, and other financial metrics** and allows users to query them in natural language.
 
-## Features
-- Upload Excel (`.xlsx`) and PDF files to extract Revenue / Expenses / Profit.
-- Saves structured `*_summary.json` files to `uploads/`.
-- Chat interface with deterministic numeric answers (profit margin, year queries), trend charts, and Ollama fallback for open questions.
-- Polished UI: KPI cards, sparkline charts, chat bubbles, export chat JSON.
+---
 
-**📁 Project Structure**
+## 🚀 Features
+- 📂 Upload **PDF or Excel** financial statements  
+- 🔎 Automatic extraction of **key metrics** (Revenue, Expenses, Profit, etc.)  
+- 💬 **Chat-based Q&A** powered by **Ollama LLMs**  
+- 📊 Trend **charts & visualizations** for financial data  
+- 🖥️ Clean, professional **UI built with Streamlit**  
+- ✅ Runs **locally** (no cloud required)  
+
+---
+
+## 📦 Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/RavikumarKamani74/financial-qa.git
+cd financial-qa
+2. Create Virtual Environment (Optional but Recommended)
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate    # On Linux/Mac
+venv\Scripts\activate       # On Windows
+3. Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
+4. Install & Run Ollama
+Download Ollama: https://ollama.ai
+
+Pull a model (example: gemma2):
+
+bash
+Copy code
+ollama pull gemma2
+▶️ Usage
+Step 1: Run Document Extractor
+bash
+Copy code
+streamlit run app.py
+Upload Excel or PDF financial documents.
+
+The app will extract metrics and save a structured JSON summary in uploads/.
+
+Step 2: Run Q&A Chat Interface
+bash
+Copy code
+streamlit run app_chat.py
+Loads the extracted summary.
+
+Ask questions like:
+
+"What was revenue in 2022?"
+
+"Show profit margin for 2023"
+
+"Summarize financial performance"
+
+📸 Screenshot
+<img width="1536" height="1024" alt="financial-qa" src="https://github.com/user-attachments/assets/eebe5555-e9b8-4da2-8d6e-e2e4984e336d" />
+
+
+📂 Project Structure
 bash
 Copy code
 financial-qa/
-│
-├── app.py             # Document extractor
-├── app_chat.py        # Chat & Q&A interface
-├── app_merged.py      # Unified app (extractor + chat)
-├── inspect_summary.py # Debug tool for extracted summaries
-├── uploads/           # Uploaded files folder
-├── requirements.txt   # Python dependencies
-├── .gitignore         # Ignore unnecessary files
-└── README.md          # Project documentation
+│── app.py               # Document extractor (upload & parse)
+│── app_chat.py          # Q&A chat interface
+│── app_merged.py        # (Optional) Combined app
+│── test_ollama.py       # Quick test for Ollama
+│── inspect_summary.py   # Debug utility for summaries
+│── requirements.txt     # Python dependencies
+│── uploads/             # Uploaded files & summaries
+│── README.md            # Project documentation
+│── .gitignore
+📝 Notes
+Works with Income Statements, Balance Sheets, Cash Flow Statements
 
+Supports conversational follow-ups in Q&A
 
-## Quick setup (Windows)
-1. Create and activate a virtual environment:
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
+If metrics cannot be found, LLM fallback answers are used
 
-Install dependencies:
+🎯 Success Criteria
+✅ Upload financial documents
+✅ Extract & preview structured data
+✅ Ask & answer financial questions
+✅ Display trend charts and metrics cleanly
 
-pip install -r requirements.txt
-
-
-**Run the app:**
-
-streamlit run app_merged.py
-
-
-Open the shown local URL in your browser (default http://localhost:8501
-).
-
-**Usage**
-
-In Upload & Extract tab: upload sample_income.xlsx or your PDF.
-
-Check uploads/<filename>_summary.json is created.
-
-Open Chat & Q&A tab: ask questions like:
-
-What was revenue in 2022?
-
-Show profit margin for 2023
-
-Show revenue trend
-
-**Files**
-
-app_merged.py — merged, polished UI Streamlit app (upload + chat).
-
-requirements.txt — dependencies.
-
-sample_income.xlsx — sample Excel for testing.
+👨‍💻 Developed as an assignment project by Ravikumar Kamani
