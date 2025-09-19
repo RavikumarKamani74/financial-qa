@@ -1,0 +1,13 @@
+# Core app
+streamlit>=1.18,<2.0
+pandas>=2.0,<3.0
+openpyxl>=3.0.10
+
+# PDF parsing (optional but recommended for PDF support)
+pdfplumber>=0.11.0
+
+# Ollama client for local LLM fallback (optional)
+ollama>=0.1.0
+
+# Convenience / utilities
+python-dotenv>=0.21.0

@@ -1,0 +1,32 @@
+{
+  "source": "sample_income.xlsx",
+  "type": "excel",
+  "sheets": {
+    "Sheet1": {
+      "rows": 3,
+      "cols": [
+        "Year",
+        "Revenue",
+        "Expenses",
+        "Profit"
+      ]
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "0": 500000.0,
+      "1": 650000.0,
+      "2": 800000.0
+    },
+    "expenses": {
+      "0": 300000.0,
+      "1": 350000.0,
+      "2": 400000.0
+    },
+    "profit": {
+      "0": 200000.0,
+      "1": 300000.0,
+      "2": 400000.0
+    }
+  }
+}
