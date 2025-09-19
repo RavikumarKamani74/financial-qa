@@ -8,6 +8,21 @@ A local Streamlit app that extracts financial metrics from Excel/PDF files and p
 - Chat interface with deterministic numeric answers (profit margin, year queries), trend charts, and Ollama fallback for open questions.
 - Polished UI: KPI cards, sparkline charts, chat bubbles, export chat JSON.
 
+**📁 Project Structure**
+bash
+Copy code
+financial-qa/
+│
+├── app.py             # Document extractor
+├── app_chat.py        # Chat & Q&A interface
+├── app_merged.py      # Unified app (extractor + chat)
+├── inspect_summary.py # Debug tool for extracted summaries
+├── uploads/           # Uploaded files folder
+├── requirements.txt   # Python dependencies
+├── .gitignore         # Ignore unnecessary files
+└── README.md          # Project documentation
+
+
 ## Quick setup (Windows)
 1. Create and activate a virtual environment:
 ```powershell
@@ -19,7 +34,7 @@ Install dependencies:
 pip install -r requirements.txt
 
 
-Run the app:
+**Run the app:**
 
 streamlit run app_merged.py
 
@@ -27,7 +42,7 @@ streamlit run app_merged.py
 Open the shown local URL in your browser (default http://localhost:8501
 ).
 
-Usage
+**Usage**
 
 In Upload & Extract tab: upload sample_income.xlsx or your PDF.
 
@@ -41,7 +56,7 @@ Show profit margin for 2023
 
 Show revenue trend
 
-Files
+**Files**
 
 app_merged.py — merged, polished UI Streamlit app (upload + chat).
 
